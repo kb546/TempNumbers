@@ -40,7 +40,16 @@ A modern, responsive website for TempNumbers, a service offering secure temporar
 
 ## Deployment
 
-This site is deployed on GitHub Pages.
+This site is deployed on both:
+
+- **GitHub Pages**: [https://kb546.github.io/TempNumbers-Website](https://kb546.github.io/TempNumbers-Website)
+- **Vercel**: [https://temp-numbers-website.vercel.app](https://temp-numbers-website.vercel.app)
+
+### Deployment Notes
+
+- GitHub Pages deployment uses static HTML export
+- Vercel deployment leverages Next.js's full capabilities including server-side rendering
+- Automatic deployments are triggered on push to the main branch
 
 ## License
 

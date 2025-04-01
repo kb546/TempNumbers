@@ -1,9 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Enable static exports for GitHub Pages
-  basePath: '/TempNumbers-Website', // Set the base path for GitHub Pages
+  // Only enable static export for GitHub Pages
+  // Vercel handles Next.js apps natively and doesn't need static export
+  output: process.env.GITHUB_ACTIONS ? 'export' : undefined,
+  
+  // Only set basePath for GitHub Pages deployment
+  basePath: process.env.GITHUB_ACTIONS ? '/TempNumbers-Website' : '',
+  
+  // Only disable image optimization for GitHub Pages
+  // Vercel supports image optimization
   images: {
-    unoptimized: true, // Disable image optimization as GitHub Pages doesn't support it
+    unoptimized: process.env.GITHUB_ACTIONS ? true : false,
     remotePatterns: [
       {
         protocol: 'https',
@@ -13,7 +20,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   experimental: {
-    allowedDevOrigins: ['http://localhost:3000']
+    // Correct format for experimental features
   }
 };
 
