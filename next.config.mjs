@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Allow CORS during development
-  allowedDevOrigins: ['http://localhost', 'http://127.0.0.1', 'http://10.220.7.31'],
-  reactStrictMode: true,
+  output: 'export', // Enable static exports for GitHub Pages
+  basePath: '/TempNumbers-Website', // Set the base path for GitHub Pages
   images: {
+    unoptimized: true, // Disable image optimization as GitHub Pages doesn't support it
     remotePatterns: [
       {
         protocol: 'https',
@@ -11,6 +11,10 @@ const nextConfig = {
       },
     ],
   },
+  reactStrictMode: true,
+  experimental: {
+    allowedDevOrigins: ['http://localhost:3000']
+  }
 };
 
 export default nextConfig; 
