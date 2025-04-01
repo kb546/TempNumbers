@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import React from "react";
+import { blogPosts } from "@/data/blogPosts";
 
 // Enhanced animation variants
 const container = {
@@ -77,63 +78,18 @@ export default function Blog() {
     }
   }, [selectedTag]);
   
-  // Blog posts matching the featured content from homepage
-  const posts = [
-    {
-      id: 1,
-      title: "Ultimate Guide: How to Protect Your Identity While Gaming Online in 2025",
-      excerpt: "Learn how to keep your personal info safe while gaming online. We'll show you how temp phone numbers, VPNs, and better security can stop problems like doxxing, swatting, and account theft when you're playing competitive games.",
-      image: "/images/blog/real/gaming-privacy.jpg",
-      tags: ["Gaming", "Privacy", "Security"],
-      date: "2025-04-02",
-      readTime: "7 min read"
-    },
-    {
-      id: 2,
-      title: "International Travel Security: Using Temporary Phone Numbers Abroad",
-      excerpt: "Stay safe online while traveling with our simple tips. Find out how temp phone numbers can protect you from SIM swapping, location tracking, and data theft when you're using travel apps, public WiFi, and booking services in other countries.",
-      image: "/images/blog/real/travel-privacy.jpg",
-      tags: ["Travel", "Privacy", "Tips"],
-      date: "2025-03-28",
-      readTime: "6 min read"
-    },
-    {
-      id: 3,
-      title: "Digital Identity Protection: Creating Anonymous Online Personas in 2025",
-      excerpt: "Learn to stay anonymous online without missing out on the fun. We'll share easy ways to create secure online identities, manage different accounts, and stop websites from connecting your activities across different platforms.",
-      image: "/images/blog/real/avatar-privacy.jpg",
-      tags: ["Digital Identity", "Privacy"],
-      date: "2025-03-22",
-      readTime: "8 min read"
-    },
-    {
-      id: 4,
-      title: "Why Every Consumer Needs a Second Phone Number: Privacy Guide 2025",
-      excerpt: "Find out why having a second phone number is so important for protecting your privacy today. Learn how temp numbers can shield you from data brokers, cut down on spam, and keep your accounts safe from SIM swapping attacks.",
-      image: "/images/blog/real/phone-privacy.jpg",
-      tags: ["Privacy", "Security"],
-      date: "2025-03-20",
-      readTime: "6 min read"
-    },
-    {
-      id: 5,
-      title: "Digital Privacy Best Practices: 15 Essential Strategies for 2025",
-      excerpt: "Protect yourself online with our easy-to-follow privacy guide. Discover simple ways to secure your personal information, stop tracking, and keep control of your data across all your devices and accounts.",
-      image: "/images/blog/real/digital-privacy.jpg",
-      tags: ["Tips", "Privacy"],
-      date: "2025-03-18",
-      readTime: "8 min read"
-    },
-    {
-      id: 6,
-      title: "The Rise of Phone Number Scams: How to Protect Yourself in 2025",
-      excerpt: "Phone scams are getting more clever, putting your identity and money at risk. Learn to spot sophisticated phone scams, see how temp numbers create a security shield, and use simple tricks to stay protected.",
-      image: "/images/blog/real/phone-scam.jpg",
-      tags: ["Security", "Scams"],
-      date: "2025-03-15",
-      readTime: "7 min read"
-    }
-  ];
+  // Convert the blog posts object to an array and add numerical ids
+  const posts = Object.entries(blogPosts)
+    .filter(([id]) => id !== "default") // Exclude the default post
+    .map(([id, post]) => ({
+      id: parseInt(id),
+      title: post.title,
+      excerpt: post.excerpt,
+      image: post.image,
+      tags: post.tags,
+      date: post.date,
+      readTime: post.readTime
+    }));
 
   // Extract all unique tags from posts
   const allTags = Array.from(
