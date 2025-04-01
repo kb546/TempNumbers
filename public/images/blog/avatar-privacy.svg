@@ -1,0 +1,94 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#292F46" />
+      <stop offset="100%" stop-color="#1A1B25" />
+    </linearGradient>
+    <linearGradient id="circle-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5FE4D6" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#5FE4D6" stop-opacity="0.1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background rectangle -->
+  <rect width="100%" height="100%" fill="url(#bg-gradient)" />
+  
+  <!-- Digital circuit pattern -->
+  <g stroke="#5FE4D6" stroke-width="1" stroke-opacity="0.2">
+    <path d="M50,50 H750 M50,100 H750 M50,150 H750 M50,200 H750 M50,250 H750 M50,300 H750 M50,350 H750 M50,400 H750" />
+    <path d="M100,50 V400 M200,50 V400 M300,50 V400 M400,50 V400 M500,50 V400 M600,50 V400 M700,50 V400" />
+    
+    <!-- Connection dots at intersections -->
+    <g fill="#5FE4D6" opacity="0.5">
+      <circle cx="100" cy="100" r="3" />
+      <circle cx="300" cy="100" r="3" />
+      <circle cx="500" cy="100" r="3" />
+      <circle cx="700" cy="100" r="3" />
+      
+      <circle cx="200" cy="150" r="3" />
+      <circle cx="400" cy="150" r="3" />
+      <circle cx="600" cy="150" r="3" />
+      
+      <circle cx="100" cy="200" r="3" />
+      <circle cx="300" cy="200" r="3" />
+      <circle cx="500" cy="200" r="3" />
+      <circle cx="700" cy="200" r="3" />
+      
+      <circle cx="200" cy="250" r="3" />
+      <circle cx="400" cy="250" r="3" />
+      <circle cx="600" cy="250" r="3" />
+      
+      <circle cx="100" cy="300" r="3" />
+      <circle cx="300" cy="300" r="3" />
+      <circle cx="500" cy="300" r="3" />
+      <circle cx="700" cy="300" r="3" />
+      
+      <circle cx="200" cy="350" r="3" />
+      <circle cx="400" cy="350" r="3" />
+      <circle cx="600" cy="350" r="3" />
+    </g>
+    
+    <!-- Circuit line connections -->
+    <path d="M100,100 L200,150 L300,100" stroke="#5FE4D6" stroke-width="2" stroke-opacity="0.4" fill="none" />
+    <path d="M500,100 L600,150 L700,100" stroke="#5FE4D6" stroke-width="2" stroke-opacity="0.4" fill="none" />
+    <path d="M100,300 L200,350 L300,300" stroke="#5FE4D6" stroke-width="2" stroke-opacity="0.4" fill="none" />
+    <path d="M500,300 L600,350 L700,300" stroke="#5FE4D6" stroke-width="2" stroke-opacity="0.4" fill="none" />
+    <path d="M300,200 L400,150 L500,200 L400,250 Z" stroke="#5FE4D6" stroke-width="2" stroke-opacity="0.4" fill="none" />
+  </g>
+  
+  <!-- Digital identity representation -->
+  <g transform="translate(400, 225)">
+    <!-- Outer circle -->
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#5FE4D6" stroke-width="2" />
+    
+    <!-- Inner hexagon -->
+    <path d="M0,-70 L60,-35 L60,35 L0,70 L-60,35 L-60,-35 Z" fill="none" stroke="#5FE4D6" stroke-width="2" />
+    
+    <!-- Identity silhouette -->
+    <g>
+      <!-- Head -->
+      <circle cx="0" cy="-15" r="30" fill="#5FE4D6" opacity="0.7" />
+      
+      <!-- Body shape -->
+      <path d="M-20,15 C-20,40 20,40 20,15 L20,-5 C20,-5 0,5 -20,-5 Z" fill="#5FE4D6" opacity="0.7" />
+      
+      <!-- Binary flowing around -->
+      <text x="-80" y="-40" font-family="monospace" font-size="10" fill="#FFFFFF" opacity="0.5">10110</text>
+      <text x="40" y="-30" font-family="monospace" font-size="10" fill="#FFFFFF" opacity="0.5">01101</text>
+      <text x="-60" y="50" font-family="monospace" font-size="10" fill="#FFFFFF" opacity="0.5">11001</text>
+      <text x="30" y="60" font-family="monospace" font-size="10" fill="#FFFFFF" opacity="0.5">10010</text>
+    </g>
+    
+    <!-- Lock symbol -->
+    <g transform="translate(0, 50) scale(0.7)">
+      <rect x="-10" y="0" width="20" height="15" rx="3" fill="#FFFFFF" />
+      <path d="M-5,-10 Q-5,-15 0,-15 Q5,-15 5,-10 L5,0 L-5,0 Z" fill="none" stroke="#FFFFFF" stroke-width="2" />
+    </g>
+  </g>
+  
+  <!-- Text banner -->
+  <rect x="0" y="360" width="800" height="90" fill="rgba(0,0,0,0.7)" />
+  <text x="400" y="410" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#FFFFFF">Digital Identity</text>
+  <text x="400" y="440" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#5FE4D6">Creating Privacy-Focused Digital Avatars</text>
+</svg> 
