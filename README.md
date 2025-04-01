@@ -1,77 +1,51 @@
 # TempNumbers Website
 
-A modern, responsive website for TempNumbers, educating people about digital privacy and the importance of having a second temporary phone number.
+A modern, responsive website for TempNumbers, a service offering secure temporary phone numbers for privacy protection.
 
 ## Features
 
-- Clean, responsive design with mobile-first approach
-- Fast-loading with smooth animations using Framer Motion
-- Dark mode support
-- Built with Next.js 14, React, and Tailwind CSS
-- Blog system with rich content support
-- Social media integration (TikTok, Instagram, YouTube)
-- UTM tracking for all Quackr links
+- **Blog Section**: Articles about privacy, security, and temporary phone numbers
+- **About Page**: Company information and mission
+- **Social Sharing**: Easy sharing of blog articles on X (Twitter), LinkedIn, and Facebook
+- **Responsive Design**: Optimized for all device sizes
+- **Modern UI**: Built with Next.js and Tailwind CSS
 
-## Getting Started
+## Technologies Used
 
-### Prerequisites
+- Next.js 14
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion for animations
 
-- Node.js 18.17 or later
-- npm or yarn
+## Local Development
 
-### Installation
+1. Clone the repository
+   ```bash
+   git clone https://github.com/kb546/TempNumbers-Website.git
+   cd TempNumbers-Website
+   ```
 
-1. Clone the repository:
-```bash
-git clone [repository-url]
-cd temp-numbers
-```
+2. Install dependencies
+   ```bash
+   npm install
+   ```
 
-2. Install dependencies:
-```bash
-npm install
-```
+3. Start the development server
+   ```bash
+   npm run dev
+   ```
 
-3. Start the development server:
-```bash
-npm run dev
-```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-The site will be available at `http://localhost:3000`
+## Deployment
 
-## Project Structure
-
-```
-src/
-├── app/                    # Next.js app directory
-│   ├── about/             # About page
-│   ├── blog/              # Blog pages
-│   ├── layout.tsx         # Root layout
-│   └── page.tsx           # Home page
-├── components/            # React components
-└── styles/               # Global styles
-```
-
-## Built With
-
-- [Next.js](https://nextjs.org/) - React framework
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- [Framer Motion](https://www.framer.com/motion/) - Animation library
-- [next-themes](https://github.com/pacocoursey/next-themes) - Dark mode support
-
-## Development
-
-### Commands
-
-- `npm run dev` - Start development server
-- `npm run build` - Build production version
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-
-### Adding Blog Posts
-
-Blog posts can be added by creating new files in the `src/app/blog/posts` directory using MDX format.
+This site is deployed on GitHub Pages.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+MIT
+
+## Author
+
+Bill Kamanzi ([@kb546](https://github.com/kb546))
