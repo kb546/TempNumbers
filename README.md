@@ -75,4 +75,3 @@ Blog posts can be added by creating new files in the `src/app/blog/posts` direct
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-# TempNumbers
